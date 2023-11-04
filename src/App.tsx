@@ -1,11 +1,13 @@
 
 import './App.css';
 
+import MainRoutes from './Routing/MainRoutes';
+
 function App() {
 
   return (
     <>
-      Hii, shotu
+      <MainRoutes/>
     </>
   );
 }
