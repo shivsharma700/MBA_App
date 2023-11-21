@@ -3,12 +3,12 @@ import {IoFastFoodOutline} from "react-icons/io5";
 import {LiaInfoCircleSolid} from "react-icons/lia";
 import {TfiMobile} from "react-icons/tfi";
 
-const TheatreName = () => {
+const TheatreName = ({theatreName} : {theatreName : string}) => {
   return (
     <div className=" w-[30%] " >
         <div className="firstRow flex flex-row  items-center ">
             <CiHeart className=" text-2xl text-pink-400 mr-4 mt-1 " />
-            <div className="name text-center font-semibold text-sm ">INOX: Dhillon Plaza (Zirakpur)</div>
+            <div className="name text-center font-semibold text-sm ">{theatreName}</div>
             <div className="info ml-[4rem] flex flex-row gap-1 justify-center items-center font-semibold text-xs  text-slate-400 ">
                 <LiaInfoCircleSolid className="text-lg" />
                 <span className="text-[0.7rem]">INFO</span>

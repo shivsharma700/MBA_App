@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import DummyProfileImage from '../Assets/dummyImage.png';
 import Logo from '../Assets/logo.png';
 function Navbar() {
@@ -7,7 +9,9 @@ function Navbar() {
             <div className="navbar bg-[#333545] w-[80vw] mx-auto">
             <div className="flex-1">
                 <div className='h-12 mr-8'>
-                    <img className="h-[100%] w-36" src={Logo} />
+                    <Link to={"/"} >
+                      <img className="h-[100%] w-36" src={Logo} />
+                    </Link>
                 </div>
                 <div className="form-control hidden lg:block lg:w-96">
                     <input type="text" placeholder="Search" className="input input-bordered w-full" />
@@ -23,13 +27,13 @@ function Navbar() {
                 </label>
                 <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm text-white dropdown-content bg-[#333545] rounded-box w-52">
                     <li>
-                    <a className="justify-between">
+                    <a className="justify-between hover:text-yellow-400">
                         Profile
                         <span className="badge">New</span>
                     </a>
                     </li>
-                    <li><a>Settings</a></li>
-                    <li><a>Logout</a></li>
+                    <li><a className=' hover:text-yellow-400 ' >Settings</a></li>
+                    <li><a className=' hover:text-yellow-400 ' >Logout</a></li>
                 </ul>
                 </div>
             </div>

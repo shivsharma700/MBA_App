@@ -36,8 +36,8 @@ const Home = () => {
                       Recommended Movies
                   </div>
                   <div className="mt-8 flex flex-col lg:flex-row justify-center items-center gap-4">
-                    {moviePosters && moviePosters.map((movie : Movie) => {
-                      return <HomeMovieCard movieImage={movie.poster} />;
+                    {moviePosters && moviePosters.map((movie : Movie, idx : number) => {
+                      return <HomeMovieCard key={idx} movieId={movie._id} movieImage={movie.poster} movieName={movie.name} />;
                     })}
                   </div>
   
